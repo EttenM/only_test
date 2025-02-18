@@ -1,0 +1,30 @@
+// Colors
+$mainColor: #ffffff;
+$whiteSecondary: #f4f5f9;
+$iris100: #5d5fef;
+$funschia: #ef5da8;
+$blackBlue: #42567a;
+$blue: #3877ee;
+
+// Fonts
+$bebas: "Bebas Neue", sans-serif;
+$ptSans: "PT Sans", sans-serif;
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

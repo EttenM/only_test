@@ -1,0 +1,66 @@
+@import "@/styles/utils/vars.scss";
+
+.history__layout {
+  width: 1440px;
+  margin-right: auto;
+  margin-left: 320px;
+  padding-top: 170px;
+  padding-bottom: 100px;
+  border-left: 1px solid rgba($blackBlue, 0.1);
+  border-right: 1px solid rgba($blackBlue, 0.1);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: rgba($blackBlue, 0.1);
+  }
+}
+
+.history__title {
+  color: $blackBlue;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  padding-left: 78px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #3877ee 0%, #ef5da8 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .history__layout {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border: none;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: none;
+    }
+  }
+  .history__title {
+    font-size: 20px;
+    padding-left: 20px;
+
+    position: relative;
+    &::before {
+      content: none;
+    }
+  }
+}

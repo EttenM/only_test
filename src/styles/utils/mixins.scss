@@ -1,0 +1,19 @@
+@function calc-index($index: 1) {
+  $widthMultHeight: calc((1vh + 1vw) * var(--lang-index));
+  // @else {
+  //   $widthMultHeight: calc(1vh + 1vw);
+  // }
+
+  $index: calc($widthMultHeight * $index);
+  @return $index;
+}
+
+@mixin description-text($textColor: $secondaryColor) {
+  font-size: calc-index(1.25);
+  color: $textColor;
+  // text-wrap: balance;
+  @media (min-width: 1400px) {
+    font-size: calc-index(1);
+    text-wrap: unset;
+  }
+}
